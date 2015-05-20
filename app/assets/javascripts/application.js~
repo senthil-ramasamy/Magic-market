@@ -14,5 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-
+//= require firstpage
+//= require cbpAnimatedHeader
+//= require classie
+//= require creative
 //= require_tree .

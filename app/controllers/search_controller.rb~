@@ -3,7 +3,6 @@ class SearchController < ApplicationController
 	if params[:q].nil?
     		@books = []
   	else
-		puts "working here"
     		@books = Book.search params[:q]
   	end
   end
