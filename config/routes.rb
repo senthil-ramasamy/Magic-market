@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/magic_market_admin', as: 'rails_admin'
+ 
+  authenticate :admin do
+ 	 mount RailsAdmin::Engine => '/magic_market_admin', as: 'rails_admin'
+  end
   devise_for :admins
   devise_for :users
   resources :books
