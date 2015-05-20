@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 
+gem "paperclip", "~> 4.2"
+
 gem 'devise'
 gem 'rails_admin'
 
