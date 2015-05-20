@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/magic_market_admin', as: 'rails_admin'
+  devise_for :admins
+  devise_for :users
   resources :books
   root 'search#search'
   get 'search', to: 'search#search'
