@@ -1,14 +1,15 @@
-@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+
 /* HERE STARTS THE MAGIC */
+
 header {
     text-align: center;
     color: #fff;
-    background-image: url('header.png');
+    background: url('header.jpg');
 
     position: fixed;
     width:100%;
     z-index: 1;
-    height: 100%;
+    height: 50%;
     overflow: hidden;
     top: 0;
     left: 0;

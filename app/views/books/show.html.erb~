@@ -1,0 +1,79 @@
+<div class="container">
+
+			<div class="row">
+				<div class="col-md-3 ">
+					<h2><%= @book.name %></h2>
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<em><%= @book.caption %></em>
+				</div>
+				<br>
+				<br>
+			</div>
+	
+			<div class="row">
+				<div class="col-md-2">
+					<img src="http://ecx.images-amazon.com/images/I/51vN15YCJyL._SY344_BO1,204,203,200_.jpg" class="img-responsive" alt="<%= @book.name %>">
+				</div>
+				<div class="col-md-4 lead">
+					<dl class="dl-horizontal">
+					  <dt>Author</dt>
+					  <dd><%= @book.author %></dd>
+					  <dt>ISBN</dt>
+					  <dd><%= @book.isbn %></dd>
+					  <dt>Rating</dt>
+					  <dd><%= @book.book_rating %></dd>
+					  <dt>Year</dt>
+					  <dd><%= @book.year_of_publishing %></dd>
+					  <dt>Publisher</dt>
+					  <dd><%= @book.publisher %></dd>
+					  <dt>Stock</dt>
+					  <dd><%= @book.stock %> units available</dd>
+					  <dt>Book Type</dt>
+					  <dd><%= @book.type_of_book %></dd>
+					  <dt>Edition</dt>
+					  <dd><%= @book.edition %></dd>		
+					</dl>
+				</div>
+				<div class="col-md-3 col-md-offset-1">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Buy</h3>
+						</div>
+						<div class="panel-body">
+							<dl class="dl-horizontal">
+								<dt>MRP</dt>
+								<dd><%= @book.mrp %></dd>
+								<dt>Discount</dt>
+								<dd><%= @book.discount %></dd>
+								
+							</dl>
+						</div>
+						<div class="panel-footer">	
+							<dl class="dl-horizontal">
+								<dt>Our Price</dt>
+								<dd><%= @book.mrp-@book.discount %></dd>
+							</dl>
+						</div>
+					</div>
+					<button type="button" class="btn btn-primary btn-block">Add to Cart</button>
+				</div>
+			</div>
+			<br><br>
+			<div class="row">
+				<div class="col-md-9 col-md-offset-1">
+					<div class="panel panel-default">
+						<div class = "panel-heading">
+						<h2 class="panel-title">Description</h2>
+						</div>
+						<div class="panel-body">
+							<%= @book.description %>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+</div>

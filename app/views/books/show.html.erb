@@ -1,114 +1,79 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>Name:</strong>
-  <%= @book.name %>
-</p>
-
-<p>
-  <strong>Caption:</strong>
-  <%= @book.caption %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @book.description %>
-</p>
-
-<p>
-  <strong>Mrp:</strong>
-  <%= @book.mrp %>
-</p>
-
-<p>
-  <strong>Discount:</strong>
-  <%= @book.discount %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @book.category %>
-</p>
-
-<p>
-  <strong>Featured:</strong>
-  <%= @book.featured %>
-</p>
-
-<p>
-  <strong>Stock:</strong>
-  <%= @book.stock %>
-</p>
-
-<p>
-  <strong>Batch details:</strong>
-  <%= @book.batch_details %>
-</p>
-
-<p>
-  <strong>Tags:</strong>
-  <%= @book.tags %>
-</p>
-
-<p>
-  <strong>Weight:</strong>
-  <%= @book.weight %>
-</p>
-
-<p>
-  <strong>Height:</strong>
-  <%= @book.height %>
-</p>
-
-<p>
-  <strong>Length:</strong>
-  <%= @book.length %>
-</p>
-
-<p>
-  <strong>Width:</strong>
-  <%= @book.width %>
-</p>
-
-<p>
-  <strong>Type of book:</strong>
-  <%= @book.type_of_book %>
-</p>
-
-<p>
-  <strong>Isbn:</strong>
-  <%= @book.isbn %>
-</p>
-
-<p>
-  <strong>Publisher:</strong>
-  <%= @book.publisher %>
-</p>
-
-<p>
-  <strong>Edition:</strong>
-  <%= @book.edition %>
-</p>
-
-<p>
-  <strong>Year of publishing:</strong>
-  <%= @book.year_of_publishing %>
-</p>
-
-<p>
-  <strong>Google book link:</strong>
-  <%= @book.google_book_link %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
-
-<p>
-  <strong>Book rating:</strong>
-  <%= @book.book_rating %>
-</p>
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+			<div class="row">
+				<div class="col-md-3 ">
+					<h2><%= @book.name %></h2>
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<em><%= @book.caption %></em>
+				</div>
+				<br>
+				<br>
+			</div>
+	
+			<div class="row">
+				<div class="col-md-2">
+					<img src="http://ecx.images-amazon.com/images/I/51vN15YCJyL._SY344_BO1,204,203,200_.jpg" class="img-responsive" alt="<%= @book.name %>">
+				</div>
+				<div class="col-md-4">
+					<dl class="dl-horizontal">
+					  <dt>Author</dt>
+					  <dd><%= @book.author %></dd>
+					  <dt>ISBN</dt>
+					  <dd><%= @book.isbn %></dd>
+					  <dt>Rating</dt>
+					  <dd><%= @book.book_rating %></dd>
+					  <dt>Year</dt>
+					  <dd><%= @book.year_of_publishing %></dd>
+					  <dt>Publisher</dt>
+					  <dd><%= @book.publisher %></dd>
+					  <dt>Stock</dt>
+					  <dd><%= @book.stock %> units available</dd>
+					  <dt>Book Type</dt>
+					  <dd><%= @book.type_of_book %></dd>
+					  <dt>Edition</dt>
+					  <dd><%= @book.edition %></dd>		
+					</dl>
+				</div>
+				<div class="col-md-3 col-md-offset-1">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Buy</h3>
+						</div>
+						<div class="panel-body">
+							<dl class="dl-horizontal">
+								<dt>MRP</dt>
+								<dd><%= @book.mrp %></dd>
+								<dt>Discount</dt>
+								<dd><%= @book.discount %></dd>
+								
+							</dl>
+						</div>
+						<div class="panel-footer">	
+							<dl class="dl-horizontal">
+								<dt>Our Price</dt>
+								<dd><%= @book.mrp-@book.discount %></dd>
+							</dl>
+						</div>
+					</div>
+					<button type="button" class="btn btn-primary btn-block">Add to Cart</button>
+				</div>
+			</div>
+			<br><br>
+			<div class="row">
+				<div class="col-md-9 col-md-offset-1">
+					<div class="panel panel-default">
+						<div class = "panel-heading">
+						<h2 class="panel-title">Description</h2>
+						</div>
+						<div class="panel-body">
+							<%= @book.description %>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+</div>
