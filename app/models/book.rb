@@ -12,6 +12,8 @@ class Book < ActiveRecord::Base
   # add a delete_<asset_name> method: 
   attr_accessor :delete_asset
   before_validation { self.asset.clear if self.delete_asset == '1' }
+  has_many :order_items
+  default_scope { where(featured: true) } #this is for checking if producct is active or not 
 end
 
 Book.import

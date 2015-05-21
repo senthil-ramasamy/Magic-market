@@ -11,6 +11,9 @@ gem 'autoprefixer-rails'
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+
+gem 'redis', '~> 3.0.1'
+gem 'hiredis', '~>0.4.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record

@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>add to cart</th>
       <th>Caption</th>
       <th>Description</th>
       <th>Mrp</th>
@@ -35,6 +36,18 @@
     <% @books.each do |book| %>
       <tr>
         <td><%= book.name %></td>
+        <td>
+          <%= form_for order_item, remote: true do |f| %>
+              <h4 class="text-right">Unit Price: <span style="color: green"><%= number_to_currency book.mrp %></span></h4>
+        <div class="input-group">
+          <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+          <div class="input-group-btn">
+            <%= f.hidden_field :book_id, value: book.id %>
+            <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+          </div>
+        </div>
+           <% end %>
+     </td>
         <td><%= book.caption %></td>
         <td><%= book.description %></td>
         <td><%= book.mrp %></td>
